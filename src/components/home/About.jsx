@@ -55,13 +55,13 @@ const About = () => {
                         transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
                         className="text-xl font-light text-gray-600"
                     >
-                        At Eagle Eyes Built Real Estate, we provide tailored property solutions, expert guidance, and exceptional service to ensure seamless transactions and satisfaction in every real estate deal.
+                        At Eagle Eyes Built Real Estate, we specialize in delivering personalized property solutions and expert guidance. Our mission is to ensure seamless transactions and client satisfaction in every real estate endeavor.
                     </motion.p>
                 </div>
             </div>
             <motion.img
-                src="photorealistic-house-with-wooden-architecture-timber-structure.jpg"
-                alt="Photorealistic house with wooden architecture"
+                src="about.jpg"
+                alt="Our team working on a project"
                 className="aspect-[3/1] object-cover"
                 initial={{ opacity: 0 }}
                 animate={isVisible ? { opacity: 1 } : {}}
@@ -73,7 +73,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.8, ease: "easeInOut" }}
                 className="max-w-xl text-gray-600"
             >
-                Find comprehensive answers to all your travel questions right here. Whether you're looking for insights on property buying or selling, we've got you covered.
+                Explore comprehensive resources for all your property inquiries. Whether you're seeking insights on buying or selling, we are here to guide you through every step of the process.
             </motion.p>
         </Section>
     );

@@ -61,12 +61,18 @@ const Testimonial = () => {
         };
     }, []);
 
+    const animationProps = {
+        initial: { opacity: 0, translateY: 20 },
+        animate: isVisible ? { opacity: 1, translateY: 0 } : {},
+        exit: { opacity: 0, translateY: -20 },
+        transition: { duration: 0.5, ease: "easeInOut" }
+    };
+
     return (
         <Section label="Testimonial" className="space-y-16 border-b" ref={sectionRef}>
             <motion.h2
-                initial={{ opacity: 0, translateY: -20 }}
-                animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+                {...animationProps}
+                transition={{ ...animationProps.transition, delay: 0.2 }}
                 className="text-[calc(24px+4vw)] leading-[calc(24px+4vw)] font-regular pb-4"
             >
                 Testimonial
@@ -76,18 +82,15 @@ const Testimonial = () => {
                     <div className="w-12 h-12 rounded-full bg-gray-300 flex-shrink-0"></div>
                     <div>
                         <motion.p
-                            initial={{ opacity: 0, translateY: 20 }}
-                            animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
-                            exit={{ opacity: 0, translateY: -20 }}
-                            transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
+                            {...animationProps}
+                            transition={{ ...animationProps.transition, delay: 0.3 }}
                             className="text-lg font-medium"
                         >
                             {testimonials[currentIndex].name}
                         </motion.p>
                         <motion.span
-                            initial={{ opacity: 0, translateY: 20 }}
-                            animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
-                            transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
+                            {...animationProps}
+                            transition={{ ...animationProps.transition, delay: 0.4 }}
                             className="text-gray-600 font-light"
                         >
                             {testimonials[currentIndex].email}
@@ -97,16 +100,15 @@ const Testimonial = () => {
                 <div className="lg:col-span-2 space-y-8">
                     <motion.p
                         key={currentIndex}
-                        initial={{ opacity: 0, translateY: 20 }}
-                        animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
-                        exit={{ opacity: 0, translateY: -20 }}
-                        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                        {...animationProps}
+                        transition={{ ...animationProps.transition, delay: 0.5 }}
                         className="text-xl font-light text-gray-600"
                     >
                         "{testimonials[currentIndex].feedback}"
                     </motion.p>
                     <div className="flex items-center justify-between">
                         <motion.button
+                            aria-label="Previous testimonial"
                             className="p-2 rounded-full border hover:bg-gray-200 transition transform hover:scale-110"
                             onClick={handlePrev}
                             whileHover={{ scale: 1.1 }}
@@ -122,6 +124,7 @@ const Testimonial = () => {
                             />
                         </div>
                         <motion.button
+                            aria-label="Next testimonial"
                             className="p-2 rounded-full border hover:bg-gray-200 transition transform hover:scale-110"
                             onClick={handleNext}
                             whileHover={{ scale: 1.1 }}

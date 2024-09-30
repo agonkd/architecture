@@ -111,7 +111,7 @@
   }
 
 
-:root {
-    overflow-x: hidden;
+:root, html, body {
+    overflow-x: hidden !important;
     @apply poppins-regular;
 }

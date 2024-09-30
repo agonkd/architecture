@@ -7,33 +7,33 @@ import { motion } from 'framer-motion';
 const Projects = () => {
     const projectData = [
         {
-            title: 'Skyline Residence',
+            title: 'Plastering, Floor & Wall Tiling',
             year: 2024,
             description: 'Luxury high-rise apartments with panoramic views, modern amenities, and a prime downtown location.',
-            imgSrc: 'photorealistic-house-with-wooden-architecture-timber-structure.jpg',
-            imgAspect: 'aspect-[2/1]'
+            imgSrc: '/projects/5.jpg',
+            imgAspect: 'aspect-[6/5]'
         },
-        {},
         {
-            title: 'Villa in Seminyak',
+            title: 'Modern Bathrooms',
             year: 2024,
-            description: 'Luxurious villa with stunning architecture and serene surroundings.',
-            imgSrc: 'photorealistic-house-with-wooden-architecture-timber-structure.jpg',
+            description: 'Architecture, Design & Building',
+            imgSrc: '/projects/4.jpg',
             imgAspect: 'aspect-[6/5]'
         },
         {},
+        {},
         {
-            title: 'Modern Beach House',
+            title: 'Painting, Decorating & Swimming Pools',
             year: 2024,
             description: 'Stylish beach house featuring open spaces and breathtaking ocean views.',
-            imgSrc: 'photorealistic-house-with-wooden-architecture-timber-structure.jpg',
+            imgSrc: '/projects/2.jpg',
             imgAspect: 'aspect-[6/5]'
         },
         {
-            title: 'Urban Loft',
+            title: 'Modern Kitchens',
             year: 2024,
             description: 'Chic urban loft in the heart of the city with contemporary design.',
-            imgSrc: 'photorealistic-house-with-wooden-architecture-timber-structure.jpg',
+            imgSrc: '/projects/3.jpg',
             imgAspect: 'aspect-[6/5]'
         },
     ];
@@ -108,12 +108,12 @@ const Projects = () => {
                     transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}  // Added delay
                 >
                     <img
-                        src='photorealistic-house-with-wooden-architecture-timber-structure.jpg'
+                        src='/projects/1.jpg'
                         className='aspect-[2/1] object-cover'
                         alt="Skyline Residence"
                     />
                     <p className="text-sm font-medium">2024</p>
-                    <p className='font-medium'>Skyline Residence</p>
+                    <p className='font-medium'>Architecture, Design & Building</p>
                     <p className='text-gray-600'>
                         Luxury high-rise apartments with panoramic views, modern amenities, and a prime downtown location.
                     </p>

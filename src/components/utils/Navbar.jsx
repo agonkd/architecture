@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav
             aria-label="Navigation bar"
-            className="md:px-16 sm:px-8 sm:py-6 p-4 flex justify-between bg-white/5 bg-clip-padding backdrop-filter backdrop-blur-sm"
+            className="md:px-16 sm:px-8 sm:py-6 p-4 flex justify-between bg-clip-padding backdrop-filter backdrop-blur-sm"
         >
             <div className="space-y-4">
                 <motion.a
@@ -15,11 +15,11 @@ const Navbar = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <div className='flex items-end gap-4'>
-                        <img src='/logo.webp' alt='logo' className='h-8' />
-                        <span className='poppins-medium-italic'>Eagle Eyes Built</span>
+                        <img src='/logo-gold.webp' alt='logo' className='h-8' />
+                        <span className='poppins-regular-italic text-yellow-300 uppercase'>Eagle Eyes Built</span>
                     </div>
                 </motion.a>
-                <motion.ul
+                {/* <motion.ul
                     className="lg:flex hidden gap-8"
                     initial={{ opacity: 0, translateY: -10 }}
                     animate={{ opacity: 1, translateY: 0 }}
@@ -31,10 +31,10 @@ const Navbar = () => {
                             whileHover={{ scale: 1.1 }} // Scale on hover
                             transition={{ duration: 0.2 }}
                         >
-                            <a href="/">{item}</a>
+                            <a href={`#${item.toLowerCase()}`}>{item}</a>
                         </motion.li>
                     ))}
-                </motion.ul>
+                </motion.ul> */}
             </div>
             <div className="lg:block hidden space-y-2">
                 <motion.a

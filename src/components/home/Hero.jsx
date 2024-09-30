@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import Navbar from "../utils/Navbar";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const backgrounds = [
-    "url(photorealistic-house-with-wooden-architecture-timber-structure.jpg)",
-    "url(another-image-url.jpg)", // Replace with actual image URLs
-    "url(yet-another-image-url.jpg)"
+    "url(photorealistic-house-with-wooden-architecture-timber-structure.webp)",
+    "url(minimalist-kitchen-interior-design.webp)", // Replace with actual image URLs
+    "url(small-bathroom-with-modern-style-ai-generated.webp)"
 ];
 
 const Hero = () => {
@@ -23,23 +23,37 @@ const Hero = () => {
     return (
         <header
             aria-label="Hero section"
-            className="h-screen flex flex-col justify-between text-white bg-black/50 bg-cover bg-top bg-blend-overlay"
-            style={{ backgroundImage: backgrounds[currentIndex] }}
+            className="h-screen flex flex-col justify-between text-white relative overflow-hidden bg-black/50"
         >
             <Navbar />
+
+            {/* Animated Background */}
+            <div className="absolute inset-0 -z-10">
+                <AnimatePresence mode="sync">
+                    <motion.div
+                        key={currentIndex}
+                        className="absolute inset-0 bg-cover bg-center bg-blend-overlay"
+                        style={{ backgroundImage: backgrounds[currentIndex] }}
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 1.05 }}
+                        transition={{ duration: 1.2, ease: "easeInOut" }}
+                    />
+                </AnimatePresence>
+            </div>
+
             <section
                 aria-label="Hero"
-                className="h-full flex flex-col justify-center md:px-16 md:pt-24 sm:px-8 sm:pt-16 px-4 p-8 lg:gap-8 gap-24 lg:text-left text-center"
+                className="h-full flex flex-col justify-center md:px-16 md:pt-24 sm:px-8 sm:pt-16 px-4 p-8 lg:gap-8 gap-24 lg:text-left text-center relative z-10"
             >
                 <motion.div
-                    className="space-y-4"
+                    className="space-y-8"
                     initial={{ opacity: 0, translateY: -20 }}
                     animate={{ opacity: 1, translateY: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
                     <h1 className="lg:text-[calc(24px+4vw)] text-[calc(24px+7vw)] lg:leading-[calc(24px+4vw)] leading-[calc(24px+7vw)] font-semibold">
                         Experience <br />
-                        <span className="text-[calc(24px+2vw)] leading-[calc(24px+2vw)] font-black">/ </span>
                         Elevated <br />
                         Living
                     </h1>
@@ -49,9 +63,10 @@ const Hero = () => {
                         animate={{ opacity: 1, translateY: 0 }}
                         transition={{ duration: 0.8, delay: 0.5 }}
                     >
-                        Luxurious spaces, refined design, personalized services, and modern amenities for a sophisticated, upscale lifestyle.
+                        Discover bespoke craftsmanship and personalized design that transforms your vision into reality.
                     </motion.p>
                 </motion.div>
+
                 <div className="flex lg:flex-row flex-col justify-between lg:items-end gap-8">
                     <motion.a
                         href="/"
@@ -60,7 +75,7 @@ const Hero = () => {
                         animate={{ opacity: 1, translateY: 0 }}
                         transition={{ duration: 0.8, delay: 0.7 }}
                     >
-                        Learn More
+                        Explore Our Work
                     </motion.a>
                     <div className="lg:w-[30vw] space-y-2 text-center">
                         <div className="flex items-center gap-8">
@@ -92,7 +107,7 @@ const Hero = () => {
                             animate={{ opacity: 1, translateY: 0 }}
                             transition={{ duration: 0.8, delay: 0.9 }}
                         >
-                            Luxurious spaces, refined design, personalized services, and modern amenities for a sophisticated, upscale lifestyle.
+                            Experience the perfect harmony of functionality, elegance, and craftsmanship in every project we undertake.
                         </motion.p>
                     </div>
                 </div>

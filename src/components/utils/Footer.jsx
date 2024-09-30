@@ -60,7 +60,7 @@ const Footer = () => {
                 transition={{ duration: 0.5, delay: 1 }} // Added delay here
             >
                 <p className="text-[calc(48px+10vw)] leading-[calc(48px+12vw)] font-medium">Eagle Eyes Built</p>
-                <ul className="flex divide-x">
+                <ul className="flex divide-x whitespace-nowrap">
                     <li className="px-3 hover:text-gray-500 transition">Terms & Conditions</li>
                     <li className="px-3 hover:text-gray-500 transition">Privacy Policy</li>
                 </ul>

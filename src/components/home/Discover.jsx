@@ -9,11 +9,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Discover = () => {
     const properties = [
-        { id: 1, title: 'Elite Estate Advisors', imgSrc: 'photorealistic-house-with-wooden-architecture-timber-structure.jpg' },
-        { id: 2, title: 'Elite Estate Advisors', imgSrc: 'photorealistic-house-with-wooden-architecture-timber-structure.jpg' },
-        { id: 3, title: 'Elite Estate Advisors', imgSrc: 'photorealistic-house-with-wooden-architecture-timber-structure.jpg' },
-        { id: 4, title: 'Elite Estate Advisors', imgSrc: 'photorealistic-house-with-wooden-architecture-timber-structure.jpg' },
-        { id: 5, title: 'Elite Estate Advisors', imgSrc: 'photorealistic-house-with-wooden-architecture-timber-structure.jpg' },
+        { id: 1, title: 'Plastering, Floor & Wall Tiling', imgSrc: 'discover/1.jpg' },
+        { id: 2, title: 'Architecture, Design & Building', imgSrc: 'discover/2.jpg' },
+        { id: 3, title: 'Painting, Decorating & Swimming Pools', imgSrc: 'discover/3.jpg' },
+        { id: 4, title: 'Modern Kitchens', imgSrc: 'discover/4.jpg' },
+        { id: 5, title: 'Modern Bathrooms', imgSrc: 'discover/5.jpg' },
     ];
 
     const [isVisible, setIsVisible] = useState(false);
@@ -77,7 +77,7 @@ const Discover = () => {
                         animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
                     >
-                        Discover a real estate agency that prioritizes client needs, offering expert guidance, personalized solutions, and seamless property transactions.
+                        Explore a real estate agency dedicated to meeting client needs through expert guidance, tailored solutions, and smooth property transactions.
                     </motion.p>
                     <motion.a
                         href="/"
@@ -102,7 +102,11 @@ const Discover = () => {
                     <Slider {...sliderSettings}>
                         {properties.map(property => (
                             <div key={property.id} className="flex flex-col items-center">
-                                <img src={property.imgSrc} alt={property.title} className="h-full object-cover" />
+                                <img
+                                    src={property.imgSrc}
+                                    alt={`Image of ${property.title}`}
+                                    className="w-full h-full object-cover"
+                                />
                                 <p className="font-normal">{property.title}</p>
                             </div>
                         ))}
@@ -125,7 +129,11 @@ const Discover = () => {
                         animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.9 + property.id * 0.1, ease: "easeInOut" }} // Staggered delays
                     >
-                        <img src={property.imgSrc} alt={property.title} className="h-full object-cover" />
+                        <img
+                            src={property.imgSrc}
+                            alt={`Image of ${property.title}`}
+                            className="w-full h-full object-cover"
+                        />
                         <p className="font-normal">{property.title}</p>
                     </motion.li>
                 ))}
