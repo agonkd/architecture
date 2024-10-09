@@ -115,3 +115,7 @@
     overflow-x: hidden !important;
     @apply poppins-regular;
 }
+
+* {
+    @apply border-gold text-white;
+}

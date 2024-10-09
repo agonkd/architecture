@@ -29,10 +29,10 @@ const About = () => {
     }, []);
 
     return (
-        <Section label="About Us" className="space-y-8 border-b" ref={sectionRef}>
+        <Section label="About Us" className="bg-neutral-800 space-y-8 border-b" ref={sectionRef}>
             <div className="flex md:flex-row flex-col md:items-end md:gap-16 gap-8">
                 <div className="md:order-1 order-2 md:w-1/3 w-2/3 flex items-center">
-                    <span className="w-full h-0.5 bg-gray-100"></span>
+                    <span className="w-full border-b"></span>
                     <motion.button
                         className="p-2 rounded-full border hover:bg-gray-200 transition"
                         whileHover={{ scale: 1.1 }}
@@ -53,9 +53,9 @@ const About = () => {
                         initial={{ opacity: 0, translateY: 20 }}
                         animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
-                        className="text-xl font-light text-gray-600"
+                        className="text-xl font-light text-gray-400"
                     >
-                        At Eagle Eyes Built Real Estate, we specialize in delivering personalized property solutions and expert guidance. Our mission is to ensure seamless transactions and client satisfaction in every real estate endeavor.
+                        We are experts in leak detection and repair, specializing in finding and fixing leaks anywhere in your home, no matter how hidden or complex. From bathroom shower leaks and mould removal to roof leaks and balcony waterproofing, our skilled team ensures a thorough diagnosis and lasting repairs. In addition to leak solutions, we offer full bathroom renovations, transforming your space while addressing any underlying issues like waterproofing and mould prevention. With extensive experience in roofing, waterproofing, and tiling, we provide comprehensive solutions to keep your home protected from water damage. Whether it's a leaky basement, façade, or flat roof, we handle it all with precision and expertise, ensuring your home stays dry, secure, and beautifully renovated.
                     </motion.p>
                 </div>
             </div>
@@ -71,9 +71,9 @@ const About = () => {
                 initial={{ opacity: 0, translateY: 20 }}
                 animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.8, ease: "easeInOut" }}
-                className="max-w-xl text-gray-600"
+                className="max-w-xl text-gray-400"
             >
-                Explore comprehensive resources for all your property inquiries. Whether you're seeking insights on buying or selling, we are here to guide you through every step of the process.
+                At Eagle Eyes Built, we’re more than just builders; we’re your partners in creating spaces you love.
             </motion.p>
         </Section>
     );

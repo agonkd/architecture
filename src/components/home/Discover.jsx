@@ -50,7 +50,7 @@ const Discover = () => {
     };
 
     return (
-        <Section label="Discover" className="border-b space-y-8" ref={sectionRef}>
+        <Section label="Discover" className="bg-neutral-800 border-b space-y-8" ref={sectionRef}>
             <div className="flex md:flex-row flex-col md:gap-16 gap-8">
                 <div className="md:w-3/5 w-2/3 md:pb-20">
                     <motion.h2
@@ -62,7 +62,7 @@ const Discover = () => {
                         Discover
                     </motion.h2>
                     <div className="flex items-center">
-                        <span className="w-full h-0.5 bg-gray-100"></span>
+                        <span className="w-full border-b"></span>
                         <motion.button
                             className="p-2 rounded-full border hover:bg-gray-200 transition"
                             whileHover={{ scale: 1.1 }}
@@ -80,7 +80,8 @@ const Discover = () => {
                         Explore a real estate agency dedicated to meeting client needs through expert guidance, tailored solutions, and smooth property transactions.
                     </motion.p>
                     <motion.a
-                        href="/"
+                        href="https://wa.me/021909231?text=I'm%20interested%20in%20your%20car%20for%20sale"
+                        target='blank'
                         className="w-fit flex items-center gap-2 py-2 px-5 rounded-full border hover:bg-black hover:text-white transition"
                         initial={{ opacity: 0, translateY: 20 }}
                         animate={isVisible ? { opacity: 1, translateY: 0 } : {}}

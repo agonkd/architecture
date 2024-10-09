@@ -62,17 +62,17 @@ const Projects = () => {
     }, []);
 
     return (
-        <Section label='Our Projects' className='space-y-16 border-b' ref={sectionRef}>
+        <Section label='Our Projects' className='bg-neutral-800 space-y-16 border-b' ref={sectionRef}>
             <motion.div
                 initial={{ opacity: 0, translateY: -20 }}
                 animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}  // Added delay
                 className="flex md:flex-row flex-col gap-4"
             >
-                <div className="md:w-1/2 md:pb-20">
+                <div className="md:w-1/2 md:pb-2">
                     <h2 className="text-[calc(24px+4vw)] leading-[calc(24px+4vw)] font-regular pb-4">Our <br /> Projects</h2>
                     <div className="flex items-center">
-                        <span className="w-full h-0.5 bg-gray-100"></span>
+                        <span className="w-full border-b"></span>
                         <button className="p-2 rounded-full border hover:bg-gray-200 transition">
                             <MdArrowForward />
                         </button>
@@ -80,14 +80,14 @@ const Projects = () => {
                 </div>
                 <div className="md:w-1/2 mt-auto font-normal space-y-4">
                     <motion.p
-                        className='text-gray-600'
+                        className='text-gray-400'
                         initial={{ opacity: 0, translateY: 20 }}
                         animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
                         transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}  // Added delay
                     >
-                        Discover a real estate agency that prioritizes client needs, offering expert guidance, personalized solutions, and seamless property transactions.
+                        Discover our diverse portfolio at Eagle Eyes Built, showcasing exceptional craftsmanship in residential renovations, commercial constructions, roofing, waterproofing, and tiling. Each project reflects our commitment to quality and client satisfaction, transforming visions into reality with precision and care.
                     </motion.p>
-                    <motion.a
+                    {/* <motion.a
                         href="/"
                         className="w-fit flex items-center gap-2 py-2 px-5 rounded-full border hover:bg-black hover:text-white transition"
                         initial={{ opacity: 0, translateY: 20 }}
@@ -96,7 +96,7 @@ const Projects = () => {
                     >
                         Learn More
                         <IoChevronDownOutline />
-                    </motion.a>
+                    </motion.a> */}
                 </div>
             </motion.div>
 
@@ -114,7 +114,7 @@ const Projects = () => {
                     />
                     <p className="text-sm font-medium">2024</p>
                     <p className='font-medium'>Architecture, Design & Building</p>
-                    <p className='text-gray-600'>
+                    <p className='text-gray-400'>
                         Luxury high-rise apartments with panoramic views, modern amenities, and a prime downtown location.
                     </p>
                 </motion.div>
@@ -132,7 +132,7 @@ const Projects = () => {
                                 className={`object-cover aspect-[6/5]`}
                             />
                             <p className="text-sm font-medium pt-2">{project.year}</p>
-                            <p className="text-lg font-light text-gray-600">{project.title}</p>
+                            <p className="text-lg font-light text-gray-400">{project.title}</p>
                         </motion.li>
                     ))}
                 </ul>

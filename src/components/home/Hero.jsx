@@ -53,9 +53,8 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
                     <h1 className="lg:text-[calc(24px+4vw)] text-[calc(24px+7vw)] lg:leading-[calc(24px+4vw)] leading-[calc(24px+7vw)] font-semibold">
-                        Experience <br />
-                        Elevated <br />
-                        Living
+                        <span className="text-[calc(18px+1vw)] font-light">Leak Experts:</span> <br />
+                        Bathrooms <br /> Roofs & <br /> Waterproofing
                     </h1>
                     <motion.p
                         className="max-w-lg"
@@ -63,13 +62,13 @@ const Hero = () => {
                         animate={{ opacity: 1, translateY: 0 }}
                         transition={{ duration: 0.8, delay: 0.5 }}
                     >
-                        Discover bespoke craftsmanship and personalized design that transforms your vision into reality.
+                        We specialize in leak repairs, bathroom, roofing/waterproofing, and tiles.
                     </motion.p>
                 </motion.div>
 
                 <div className="flex lg:flex-row flex-col justify-between lg:items-end gap-8">
                     <motion.a
-                        href="/"
+                        href="#projects"
                         className="lg:w-fit text-center py-2 px-5 rounded-full bg-white text-black backdrop-filter backdrop-blur-sm hover:bg-white/10 hover:text-white transition"
                         initial={{ opacity: 0, translateY: 20 }}
                         animate={{ opacity: 1, translateY: 0 }}
@@ -107,7 +106,7 @@ const Hero = () => {
                             animate={{ opacity: 1, translateY: 0 }}
                             transition={{ duration: 0.8, delay: 0.9 }}
                         >
-                            Experience the perfect harmony of functionality, elegance, and craftsmanship in every project we undertake.
+                            With a reputation for reliability and expertise, our trusted team ensures timely solutions for all your home's water damage issues while transforming your space with quality renovations.
                         </motion.p>
                     </div>
                 </div>

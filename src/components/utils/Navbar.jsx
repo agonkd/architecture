@@ -16,7 +16,7 @@ const Navbar = () => {
                 >
                     <div className='flex items-end gap-4'>
                         <img src='/logo-gold.webp' alt='logo' className='h-8' />
-                        <span className='poppins-regular-italic text-yellow-300 uppercase'>Eagle Eyes Built</span>
+                        <span className='poppins-regular text-yellow-300 uppercase drop-shadow-[0_4px_6px_rgba(255,215,0,0.3)]'>Eagle Eyes Built</span>
                     </div>
                 </motion.a>
                 {/* <motion.ul
@@ -52,7 +52,7 @@ const Navbar = () => {
                     animate={{ opacity: 1, translateY: 0 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                 >
-                    +1 (555) 123-4567
+                    021909231
                 </motion.span>
             </div>
         </nav>

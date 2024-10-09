@@ -5,19 +5,25 @@ import Section from '../utils/Section';
 
 const testimonials = [
     {
-        name: "Adriana O'Sullivan",
-        email: "adriana@email.com",
-        feedback: "Eagle Eyes Built Real Estate transformed our home buying experience with professionalism and care, making the process smooth and enjoyable. Highly recommended for anyone seeking quality service."
+        name: "Tony",
+        email: "",
+        feedback: "Very good. Arrived when they said they would and did the job with the minimum of fuss, leaving it nice and tidy afterwards.Very pleased"
     },
     {
-        name: "John Doe",
-        email: "john.doe@email.com",
-        feedback: "A fantastic experience! The agents were knowledgeable and attentive, ensuring I found the perfect home."
+        name: "Daniel",
+        email: "",
+        feedback: "Alban and his team are friendly, clear in communication and punctual. We are happy with the quality of the work and how they started on time and finished when they said they would."
     },
     {
-        name: "Jane Smith",
-        email: "jane.smith@email.com",
-        feedback: "From start to finish, the service was outstanding. I felt supported every step of the way."
+        name: "Shane S",
+        email: "",
+        feedback: "Highly Recommended. A+++ Very Professional and Holnfull!"
+    }
+    ,
+    {
+        name: "Leonardo",
+        email: "021909231",
+        feedback: "I recently had the pleasure of engaging with Eagle Eyes Built for a roofing project, and I must say, the experience was nothing short of exceptional. From the outset, their professionalism shone through. They were prompt in their responses and displayed exemplary communication skills which made the entire process seamless. I'm immensely pleased with the outcome and would highly recommend Eagle Eyes Built to anyone in need of roofing services."
     }
 ];
 
@@ -69,7 +75,7 @@ const Testimonial = () => {
     };
 
     return (
-        <Section label="Testimonial" className="space-y-16 border-b" ref={sectionRef}>
+        <Section label="Testimonial" className="bg-neutral-800 space-y-16 border-b" ref={sectionRef}>
             <motion.h2
                 {...animationProps}
                 transition={{ ...animationProps.transition, delay: 0.2 }}
@@ -91,7 +97,7 @@ const Testimonial = () => {
                         <motion.span
                             {...animationProps}
                             transition={{ ...animationProps.transition, delay: 0.4 }}
-                            className="text-gray-600 font-light"
+                            className="text-gray-400 font-light"
                         >
                             {testimonials[currentIndex].email}
                         </motion.span>
@@ -102,7 +108,7 @@ const Testimonial = () => {
                         key={currentIndex}
                         {...animationProps}
                         transition={{ ...animationProps.transition, delay: 0.5 }}
-                        className="text-xl font-light text-gray-600"
+                        className="text-xl font-light text-gray-400"
                     >
                         "{testimonials[currentIndex].feedback}"
                     </motion.p>
