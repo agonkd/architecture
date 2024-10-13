@@ -22,7 +22,7 @@ const testimonials = [
     ,
     {
         name: "Leonardo",
-        email: "021909231",
+        email: "",
         feedback: "I recently had the pleasure of engaging with Eagle Eyes Built for a roofing project, and I must say, the experience was nothing short of exceptional. From the outset, their professionalism shone through. They were prompt in their responses and displayed exemplary communication skills which made the entire process seamless. I'm immensely pleased with the outcome and would highly recommend Eagle Eyes Built to anyone in need of roofing services."
     }
 ];

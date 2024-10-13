@@ -44,7 +44,7 @@ const Navbar = () => {
                     animate={{ opacity: 1, translateY: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                    Main Street Plaza, Downtown Business District
+                    Auckland
                 </motion.a>
                 <motion.span
                     className="block font-medium"

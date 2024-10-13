@@ -49,7 +49,7 @@ const Footer = () => {
             >
                 <div className="flex lg:flex-row flex-col lg:gap-32 gap-24">
                     <div className="space-y-2">
-                        <a href="/" className="text-lg font-light">Main Street Plaza, Downtown Business District</a>
+                        <a href="/" className="text-lg font-light">Auckland</a>
                         <span className="block font-medium">021909231</span>
                     </div>
                     <ul className="space-y-4">
@@ -63,6 +63,7 @@ const Footer = () => {
                 <div className="space-y-4">
                     <span className="block text-lg">Get in Touch</span>
                     <a href="mailto:eagleeyesbuilt@gmail.com" className="block md:text-[calc(24px+2vw)] text-[calc(14px+2vw)] leading-none font-light">eagleeyesbuilt@gmail.com</a>
+                    <a href="https://wa.me/021909231" className="block md:text-[calc(24px+2vw)] text-[calc(14px+2vw)] leading-none font-light">021909231</a>
                 </div>
             </motion.footer>
             <motion.div
@@ -71,7 +72,7 @@ const Footer = () => {
                 animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
                 transition={{ duration: 0.5, delay: 1 }} // Added delay here
             >
-                <p className="text-[calc(36px+8vw)] leading-[calc(36px+10vw)] font-medium">Eagle Eyes Built</p>
+                <p className="text-[calc(36px+6vw)] leading-[calc(36px+8vw)] font-medium">Eagle Eyes Built</p>
                 {/* <ul className="flex divide-x whitespace-nowrap">
                     <li className="px-3 hover:text-gray-500 transition">Terms & Conditions</li>
                     <li className="px-3 hover:text-gray-500 transition">Privacy Policy</li>

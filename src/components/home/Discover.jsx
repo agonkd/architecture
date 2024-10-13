@@ -80,7 +80,7 @@ const Discover = () => {
                         Explore a real estate agency dedicated to meeting client needs through expert guidance, tailored solutions, and smooth property transactions.
                     </motion.p>
                     <motion.a
-                        href="https://wa.me/021909231?text=I'm%20interested%20in%20your%20car%20for%20sale"
+                        href="https://wa.me/021909231"
                         target='blank'
                         className="w-fit flex items-center gap-2 py-2 px-5 rounded-full border hover:bg-black hover:text-white transition"
                         initial={{ opacity: 0, translateY: 20 }}
